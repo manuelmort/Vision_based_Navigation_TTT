@@ -10,7 +10,7 @@
     <include>
       <name>wall_1</name>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20240</uri>
-      <pose>-10.0 -4.164871341284088 0 0 1.57 0.12</pose>
+      <pose>-10.0 -4.664871341284088 0 0 1.57 0.12</pose>
     </include>
     <include>
       <name>tree_0</name>
