@@ -8,7 +8,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     declared_args = [
-        DeclareLaunchArgument('x', default_value='-10.5'),
+        DeclareLaunchArgument('x', default_value='-9'),
         DeclareLaunchArgument('y', default_value='-4.5'),
         DeclareLaunchArgument('z', default_value='0'),
         DeclareLaunchArgument('yaw', default_value='0'),
@@ -17,7 +17,7 @@ def generate_launch_description():
     pkg_share = FindPackageShare('vision_based_navigation_ttt')
     xacro_path = PathJoinSubstitution([pkg_share, 'urdf', 'jackal_gazebo.urdf.xacro'])
     #yaml_file = PathJoinSubstitution([pkg_share, 'config', 'control.yaml'])
-    world_path = PathJoinSubstitution([pkg_share, 'GazeboWorlds', 'corridor_2.world'])
+    world_path = PathJoinSubstitution([pkg_share, 'GazeboWorlds','l_shaped_corridor.sdf'])
 
     robot_description = ParameterValue(
         Command(['xacro ', xacro_path]),
@@ -102,7 +102,7 @@ def generate_launch_description():
         parameters=[{'image_sub_name': '/camera/image'}, {'use_sim_time': True}],
         output='screen'
     )
-
+    
     tau_node = Node(
         package='vision_based_navigation_ttt',
         executable='tau_computation.py',
@@ -125,8 +125,8 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_entity,
         load_jsb,
-        load_diffdrive,
         bridge,
+        load_diffdrive,
         optical_flow_node,
         tau_node,
         controller_node,

@@ -48,6 +48,7 @@ install(PROGRAMS
   nodes/optical_flow.py
   nodes/controller.py
   nodes/tau_computation.py
+  nodes/bezier_path_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -1,0 +1,779 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="clean_corridor">
+    
+    <!-- Ground and Lighting -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground%20Plane</uri>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+
+    <!-- Left Wall Segment 1 -->
+   <include>
+      <name>tree_0</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -5.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_1</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -3.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_2</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -1.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_3</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 0.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_4</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 2.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_5</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 4.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_6</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 6.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_7</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 8.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_8</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_9</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-8.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_10</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-6.5 10.50 0 0 0 0.0</pose>
+    </include>
+
+    <include>
+      <name>tree_11</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-4.5 10.50 0 0 0 0.0</pose>
+    </include>
+
+    <include>
+      <name>tree_12</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-2.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_13</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-0.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_14</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>1.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_15</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>3.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_16</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>5.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_17</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>7.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_18</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 10.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_19</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 8.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_20</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 6.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_21</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 4.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_22</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 2.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_23</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 0.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_24</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -1.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_25</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -3.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_26</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -5.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_27</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -7.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_28</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -9.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_29</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>9.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_30</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>7.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_31</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>5.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_32</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>3.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_33</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>1.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_34</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-0.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_35</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-2.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_36</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-4.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_37</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-6.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_38</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-8.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_39</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -11.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_40</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -9.50 0 0 0 0.0</pose>
+    </include>
+    <include>
+      <name>tree_41</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20Tree</uri>
+      <pose>-10.5 -7.50 0 0 0 0.0</pose>
+    </include>
+
+    <include>
+      <name>right_wall_2</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-9.4 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>left_wall_3</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>right_wall_4</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-7.6 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>left_wall_5</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-6.4 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>right_wall_6</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-5.2 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>left_wall_7</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.0 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_8</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-2.8 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>right_wall_9</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-1.6 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>right_wall_95</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-0.4 -11.0 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>right_wall_10</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>0.6 -11.0 0 0 1.57 0</pose>
+    </include>
+   
+     <include>
+      <name>right_wall_11</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>1.8 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_12</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>3.0 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_13</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.2 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_14</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>5.4 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_15</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>6.6 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_16</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>7.8 -11.0 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_17</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -10.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_18</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -9.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_19</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -8.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_20</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -6.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_21</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -5.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_22</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -4.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_23</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -3.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_24</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -2.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_25</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 -0.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_26</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 0.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_27</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 1.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_28</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 2.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_29</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 3.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_30</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 5.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_31</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 6.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_32</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 7.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_33</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>9.6 8.6 0 0 1.57 1.57</pose>
+    </include>
+ 
+    <include>
+      <name>right_wall_35</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>7.8 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_36</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>6.6 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_37</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>5.4 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_38</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.2 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_39</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>3.0 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_40</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>1.8 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_41</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>0.6 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_42</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-0.6 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_43</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-1.8 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_44</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-3.0 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_45</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.2 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_46</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-5.4 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_47</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-5.6 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_48</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-6.8 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_49</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-7.0 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_50</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.2 9.2 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>right_wall_51</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-9.4 9.2 0 0 1.57 0</pose>
+    </include>
+
+    <include>
+      <name>right_wall_52</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 8.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_53</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 7.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_54</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 6.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_55</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 5.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_56</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 3.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_57</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 2.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_58</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 1.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+    <name>right_wall_59</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+    <pose>-8.8 0.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_60</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -1.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_61</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -2.2 0 0 1.57 1.57</pose>
+    </include>
+
+    <include>
+      <name>right_wall_62</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -3.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_63</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -4.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_64</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -5.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_65</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -7.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_66</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -8.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_67</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -9.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>right_wall_68</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-8.8 -10.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>walking_actor_1</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/walking%20actor
+      </uri>
+      <pose>-2 -8 1 0 0 0.5 </pose>
+    </include>
+    <include>
+      <name>walking_actor_2</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/NGD1004/models/Walking%20actor
+      </uri>
+      <pose>5 5 1 0 0 0.0 </pose>
+    </include>
+  <include>
+      <name>walking_actor_3</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/NGD1004/models/Walking%20actor </uri>
+      <pose>5 -5 1 0 0 0.0 </pose>
+    </include>
+  <include>
+      <name>walking_actor_4</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/NGD1004/models/Walking%20actor
+      </uri>
+      <pose>-7 5 1 0 0 0.0 </pose>
+    </include>
+
+    <include>
+      <name>center_wall_2</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 -3.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_3</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 -2.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_4</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 -1.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_5</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 -0.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_6</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 1.0 0 0 1.57 1.57</pose>
+    </include>
+
+    <include>
+      <name>center_wall_7</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.4 2.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_8</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-5.0 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_9</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-3.8 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_10</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-2.6 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_11</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-1.4 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_12</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-0.2 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_13</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>1.0 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_14</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>2.2 2.8 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_15</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 2.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_16</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 1.0 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_17</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 -0.2 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_18</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 -1.4 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_19</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 -2.6 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_20</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>4.0 -3.8 0 0 1.57 1.57</pose>
+    </include>
+    <include>
+      <name>center_wall_21</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>2.2 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_22</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>1.0 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_23</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-0.2 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_24</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-1.0 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_25</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-2.2 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_26</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-3.4 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_27</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-4.6 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+      <name>center_wall_28</name>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-5.0 -4.4 0 0 1.57 0</pose>
+    </include>
+    <include>
+    <name>pallet_box_1</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+      <pose>-4.0 -4.5 0 0 0 1.57</pose>
+     <static>true</static>
+    </include>
+    <include>
+    <name>pallet_box_2</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+      <pose>1.0 4.1 0 0 0 -1.57</pose>
+     <static>true</static>
+    </include>
+    <include>
+    <name>corner_pallet_box_1</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+     <static>true</static>
+     <pose>8.5 9.1 0 0 0 -1.57</pose>
+    </include>
+    <include>
+    <name>corner_pallet_box_2</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+      <pose>-8.9 9.1 0 0 0 -1.57</pose>
+      <static>true</static>
+    </include>
+    <include>
+    <name>corner_pallet_box_3</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+      <pose>-8.9 -9.7 0 0 0 -1.57</pose>
+      <static>true</static>
+    </include>
+    <include>
+    <name>corner_pallet_box_4</name>
+      <uri>
+      https://fuel.gazebosim.org/1.0/Kittaphat/models/pallet_box
+      </uri>
+      <pose>8.5 -9.7 0 0 0 -1.57</pose>
+      <static>true</static>
+    </include>
+  </world>
+</sdf>

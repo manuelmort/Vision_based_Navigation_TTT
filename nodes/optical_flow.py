@@ -36,15 +36,14 @@ def set_limit(img_width, img_height):
     y_init_r = int(1 * img_height / 12)
     y_end_r = int(7 * img_height / 12)
 
-def draw_optical_flow_field(gray_image, points_old, points_new, flow, dt):
+def draw_optical_flow_field(gray_image, points_old, points_new):
     color_img = cv2.cvtColor(gray_image, cv2.COLOR_GRAY2BGR)
     for i in range(len(points_new)):
         x0, y0 = int(points_old[i, 0]), int(points_old[i, 1])
         x1, y1 = int(points_new[i, 0]), int(points_new[i, 1])
-        cv2.line(color_img, (x0, y0), (x1, y1), (0, 255, 0), 3)
-
+        cv2.line(color_img, (x0, y0), (x1, y1), (0, 255, 0), 2)
     cv2.imshow('Optical Flow', color_img)
-    cv2.waitKey(10)
+    cv2.waitKey(1)   # was 10ms — blocks far less now
 
 class OFCalculator(Node):
     def __init__(self, param):
@@ -58,39 +57,47 @@ class OFCalculator(Node):
         self.prev_time = 0.0
         self.tracking = False
         self.min_feat_threshold = 0.6
-        self.num_ext_features = 250
-        self.num_cen_features = 150
+
+        # ---- LIGHTENED: reduced feature counts ------------------------
+        self.num_ext_features = 80    # was 150
+        self.num_cen_features = 30    # was 50
         self.min_num_features = (2 * self.num_ext_features + self.num_cen_features) / 2
-        #self.min_num_features = 200
-        
+
+        # ---- LIGHTENED: frame skipping --------------------------------
+        self.frame_skip = 1     # process every 2nd frame (0 = every frame)
+        self.frame_cnt  = 0
+
         self.roi_el = np.array([])
         self.roi_er = np.array([])
         self.roi_c = np.array([])
 
         self.orb_extreme = cv2.ORB_create(self.num_ext_features)
         self.orb_center = cv2.ORB_create(self.num_cen_features)
-        self.lk_params = dict(winSize=(15, 15), maxLevel=3,
+
+        # ---- LIGHTENED: smaller LK window, fewer pyramid levels -------
+        self.lk_params = dict(winSize=(11, 11), maxLevel=2,
                               criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 
-        self.image_sub = self.create_subscription(Image, self.image_sub_name, self.callback, 10)
+        self.image_sub = self.create_subscription(Image, self.image_sub_name, self.callback, 1)
+        # queue depth 1: drop stale frames instead of queueing them
+
         self.optic_flow_pub = self.create_publisher(OpticalFlow, "optical_flow", 10)
 
     def callback(self, data):
-        self.get_logger().info("Received image")
+        # ---- LIGHTENED: skip frames -----------------------------------
+        self.frame_cnt += 1
+        if self.frame_skip and (self.frame_cnt % (self.frame_skip + 1) != 0):
+            return
+
         try:
             curr_image = self.bridge.imgmsg_to_cv2(data, "mono8")
         except CvBridgeError as e:
             self.get_logger().error(str(e))
             return
 
-        # Time parsing (ROS 2 Jazzy uses .sec, .nanosec)
         secs = data.header.stamp.sec
         nsecs = data.header.stamp.nanosec
         curr_time = float(secs) + float(nsecs) * 1e-9
-
-        if self.prev_time != 0:
-            frequency = 1.0 / (curr_time - self.prev_time)
-            print("Frequency: {:.2f} Hz".format(frequency))
 
         if self.prev_image is None:
             self.prev_image = curr_image
@@ -101,7 +108,6 @@ class OFCalculator(Node):
             return
 
         if not self.tracking:
-            print("new keyframe!")
             self.prev_kps = self.detect_features(curr_image)
             self.tracking = len(self.prev_kps) > 0
             if not self.tracking:
@@ -121,10 +127,12 @@ class OFCalculator(Node):
             self.prev_kps = good_kps_new.reshape(-1, 1, 2)
 
         dt = curr_time - self.prev_time
+        if dt <= 0:
+            dt = 1e-3
         flow = good_kps_new - good_kps_old
 
         if self.show == 1:
-            draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
+            draw_optical_flow_field(curr_image, good_kps_old, good_kps_new)
 
         msg = OpticalFlow()
         msg.header.stamp.sec = secs
@@ -160,21 +168,28 @@ class OFCalculator(Node):
             keypoints.extend(kp)
 
         if keypoints:
-            print(f"[DEBUG] Detected {len(keypoints)} total keypoints.")
-
             pts = cv2.KeyPoint_convert(keypoints)
             return np.float32(pts.reshape(-1, 1, 2))
-    
 
         return np.array([], dtype='f')
 
 def main(args=None):
     rclpy.init(args=args)
-    param = sys.argv[1] if len(sys.argv) > 1 else 0
+    # Parse only non-ROS args; default to 0 (no display)
+    param = 0
+    for a in sys.argv[1:]:
+        if a.isdigit():
+            param = a
+            break
     node = OFCalculator(param)
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
