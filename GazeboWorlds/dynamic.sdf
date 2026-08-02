@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="clean_corridor">
+    
+    <!-- Ground and Lighting -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground%20Plane</uri>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+
+    <!-- Left Wall Segment 1 -->
+    <include>
+      <name>left_wall_1</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-10.25 -4.08 0 0 1.57 0.0</pose>
+    </include> 
+ 
+    <include>
+      <name>right_wall_2</name>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NIST%20maze%20wall%20120</uri>
+      <pose>-10.25 -5.5 0 0 1.57 0.0</pose>
+    </include>
+    <include>
+      <name>moving_person_1</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/Walking%20actor
+      </uri>
+      <pose>-1.25 -5.5 1 0.0 0.0 0.0</pose>
+    </include>
+    <include>
+      <name>moving_person_2</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/Walking%20actor
+      </uri>
+      <pose>-5 -4.5 1.0 0 0.0 0.0</pose>
+    </include>
+    <include>
+      <name>moving_person_3</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/Walking%20actor
+      </uri>
+      <pose>-6.00 -2.5 1.0 0.0 0.0 0.0</pose>
+    </include>
+    <include>
+      <name>relative_actor_1</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/actor%20-%20relative%20paths
+      </uri>
+    <pose>-2.00 -2.5 0.0 0.0 0.0 0.0</pose>
+    </include>
+    <include>
+      <name>relative_actor_2</name>
+      <uri>
+        https://fuel.gazebosim.org/1.0/chapulina/models/actor%20-%20relative%20paths
+      </uri>
+     <pose>2.00 -3.5 0.0 0.0 0.0 1.57</pose>
+    </include>
+   
+    </world>
+</sdf>

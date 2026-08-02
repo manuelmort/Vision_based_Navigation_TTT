@@ -61,11 +61,24 @@ class OFCalculator(Node):
         # ---- LIGHTENED: reduced feature counts ------------------------
         self.num_ext_features = 80    # was 150
         self.num_cen_features = 30    # was 50
-        self.min_num_features = (2 * self.num_ext_features + self.num_cen_features) / 2
+        # FIXED: absolute floor, not half of max — the old formula (95) exceeded
+        # what low-texture walls can provide, causing an endless re-detect loop
+        self.min_num_features = 25
+
+        # Contrast enhancement — helps ORB find corners on low-texture walls
+        self.clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
 
         # ---- LIGHTENED: frame skipping --------------------------------
-        self.frame_skip = 1     # process every 2nd frame (0 = every frame)
+        self.frame_skip = 0     # process every frame (obstacles need fast detection)
         self.frame_cnt  = 0
+
+        # ---- Periodic re-detection ------------------------------------
+        # Refresh features every N processed frames so NEW objects entering
+        # the view get features quickly (LK only tracks existing points —
+        # without this, an approaching obstacle stays featureless until
+        # tracking collapses entirely)
+        self.redetect_every = 10   # at 15 Hz → refresh every ~0.7 s
+        self.since_detect   = 0
 
         self.roi_el = np.array([])
         self.roi_er = np.array([])
@@ -95,6 +108,9 @@ class OFCalculator(Node):
             self.get_logger().error(str(e))
             return
 
+        # Contrast enhancement for feature-poor scenes
+        curr_image = self.clahe.apply(curr_image)
+
         secs = data.header.stamp.sec
         nsecs = data.header.stamp.nanosec
         curr_time = float(secs) + float(nsecs) * 1e-9
@@ -107,11 +123,16 @@ class OFCalculator(Node):
             self.tracking = len(self.prev_kps) > 0
             return
 
-        if not self.tracking:
+        if not self.tracking or self.since_detect >= self.redetect_every:
             self.prev_kps = self.detect_features(curr_image)
             self.tracking = len(self.prev_kps) > 0
+            self.since_detect = 0
             if not self.tracking:
+                self.prev_image = curr_image
+                self.prev_time = curr_time
                 return
+
+        self.since_detect += 1
 
         tracked_features, status, _ = cv2.calcOpticalFlowPyrLK(self.prev_image, curr_image,
                                                                self.prev_kps, None,
